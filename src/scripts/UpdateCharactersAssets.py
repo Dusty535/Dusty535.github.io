@@ -28,7 +28,6 @@ with open("src/data/Characters.json", encoding="utf8") as chara:
                 result = soup.find("div", {"class": "fullImageLink"})
                 CharacterLink = result.find('a')
                 CharacterLink = CharacterLink.get('href')
-                CharacterLink = url + CharacterLink
 
                 #Download Image
                 with open('src/img/characters/'+id+'.png', 'wb') as handle:
